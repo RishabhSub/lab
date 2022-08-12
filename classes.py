@@ -25,14 +25,14 @@ class Television:
             self.__status = True
 
     # Getter functon
-    def get_channel(self):
+    def get_channel(self) -> int:
         """
 
         :return: Returns the current value of the private variable channel.
         """
         return self.__channel
 
-    def get_volume(self):
+    def get_volume(self) -> int:
         """
 
         :return: Returns the current value of the private variable volume.
@@ -103,7 +103,7 @@ class Television:
             else:
                 self.__volume -= 1
 
-    def __str__(self):
+    def __str__(self) -> str:
         """
         :return: A string which states the status of the Television instance, the
         current channel, and the current volume.
