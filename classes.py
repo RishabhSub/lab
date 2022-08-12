@@ -15,7 +15,7 @@ class Television:
         self.__channel = Television.MIN_CHANNEL
         self.__volume = Television.MIN_VOLUME
 
-    def power(self):
+    def power(self) -> None:
         """
         :return: Does not return anything, but this is a setter function to set the value of private variable status.
         """
@@ -40,7 +40,7 @@ class Television:
         return self.__volume
 
     # Setter function
-    def channel_up(self):
+    def channel_up(self) -> str:
         """
 
         :return: A setter function for private variable channel. If status is set to True, and if channel is set
@@ -57,7 +57,7 @@ class Television:
             return 'Television is not turned on.'
 
     # Setter function
-    def channel_down(self):
+    def channel_down(self) -> str:
         """
 
         :return: A setter function for private variable channel. If status is set to True, and if channel is set
@@ -74,7 +74,7 @@ class Television:
             return 'Television is not turned on.'
 
     # Setter function
-    def volume_up(self):
+    def volume_up(self) -> str:
         """
 
         :return: Setter function for private variable volume. If television status is False, returns
@@ -91,7 +91,7 @@ class Television:
             return 'Television is not turned on.'
 
     # Setter function
-    def volume_down(self):
+    def volume_down(self) -> None:
         """
         :return: Setter function for private variable volume. If television status is False, returns
         "Television is not turned on." If status is True, decrements volume by 1. If volume
