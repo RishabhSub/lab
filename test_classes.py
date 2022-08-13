@@ -8,7 +8,7 @@ class Test:
     def teardown_method(self):
         del self.tv1
 
-    def init_test(self):
+    def test_init(self):
         assert self.tv1.__str__() == 'TV status: Is on = False, Channel = 0, Volume = 0'
 
     def test_volume_up(self):
