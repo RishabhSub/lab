@@ -8,6 +8,9 @@ class Test:
     def teardown_method(self):
         del self.tv1
 
+    def init_test(self):
+        assert self.tv1.__str__() == 'TV status: Is on = False, Channel = 0, Volume = 0'
+
     def test_volume_up(self):
         self.tv1.volume_up()
         assert self.tv1.__str__() == 'TV status: Is on = False, Channel = 0, Volume = 0'
@@ -65,14 +68,8 @@ class Test:
         self.tv1.channel_down()
         assert self.tv1.__str__() == 'TV status: Is on = True, Channel = 0, Volume = 0'
 
-    def power_on(self):
-        assert self.tv1.__str__() == 'TV status: Is on = False, Channel = 0, Volume = 0'
-
-        self.tv1.power()
-        assert self.tv1.__str__() == 'TV status: Is on = True, Channel = 0, Volume = 0'
-
-    def power_off(self):
-        assert self.tv1.__str__() == 'TV status: Is on = False, Channel = 0, Volume = 0'
+    def power(self):
+        assert self.tv1.power() == 'TV status: Is on = False, Channel = 0, Volume = 0'
 
         self.tv1.power()
         assert self.tv1.__str__() == 'TV status: Is on = True, Channel = 0, Volume = 0'
